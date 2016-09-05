@@ -1,0 +1,73 @@
+<html>
+
+<style>
+input{width:200px;height=100}
+#luo{width:820px;text-align:right;font-size:50px;}
+</style>
+<script>
+var vv
+var mm=0
+function uu(o){
+
+   luo.value=luo.value+o.value;
+
+   if(o.value=="+"){mm=parseFloat(luo.value)+mm;luo.value="";vv="+"}
+   if(o.value=="-"){mm=parseFloat(luo.value)-mm;luo.value="";vv="-"}
+   if(o.value=="*"){mm=parseFloat(luo.value)+mm;luo.value="";vv="*"} 
+   if(o.value=="/"){mm=parseFloat(luo.value)+mm;luo.value="";vv="/"}
+
+
+ if(o.value=="="){
+  if(vv=="+"){luo.value=mm+parseFloat(luo.value);vv="";mm=0}
+
+  if(vv=="-"){luo.value=mm-parseFloat(luo.value) ;vv="";mm=0}
+ 
+ if(vv=="*"){luo.value=mm*parseFloat(luo.value);vv="";mm=0}
+
+  if(vv=="/"){luo.value=mm/parseFloat(luo.value);vv="";mm=0}
+
+}
+}
+</script>
+<body>
+
+<table border="1">
+<tr align="center">
+<td colspan="4"><input type="text" id="luo" value=""></td></tr>
+<tr align="center">
+<td><input type="button" value="1" onclick="uu(this)"></input></td>
+<td><input type="button" value="2" onclick="uu(this)"></input></td>
+<td><input type="button" value="3" onclick="uu(this)"></input></td>
+<td><input type="button" value="4" onclick="uu(this)"></input></td>
+</tr>
+<tr align="center">
+<td><input type="button" value="5" onclick="uu(this)"></input></td>
+<td><input type="button" value="6" onclick="uu(this)"></input></td>
+<td><input type="button" value="7" onclick="uu(this)"></input></td>
+<td><input type="button" value="8" onclick="uu(this)"></input></td>
+</tr>
+<tr align="center">
+<td><input type="button" value="9" onclick="uu(this)"></input></td>
+<td><input type="button" value="0" onclick="uu(this)"></input></td>
+<td><input type="button" value="+" onclick="uu(this)"></input></td>
+<td><input type="button" value="-" onclick="uu(this)"></input></td>
+</tr>
+<tr>
+<td><input type="button" value="*" onclick="uu(this)"></input></td>
+<td><input type="button" value="/" onclick="uu(this)"></input></td>
+<td><input type="button" value="&" onclick="uu(this)"></input></td>
+<td><input type="button" value="=" onclick="uu(this)"></input></td>
+</tr>
+<tr>
+
+<td><input type="button" value="/" onclick="uu(this)"></input></td>
+<td><input type="button" value="&" onclick="uu(this)"></input></td>
+<td><input type="button" value="=" onclick="uu(this)"></input></td><td><input type="reset" value="oii"></input></td>
+</tr>
+
+
+</table>
+
+
+</body>
+</html>
